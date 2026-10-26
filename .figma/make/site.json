@@ -1,0 +1,11 @@
+{
+  "title": "Aga Malik",
+  "description": "Interactive slider with stepwise sun and moon icons enhances user control and visual feedback, featuring intuitive cursor changes and organized content tabs.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

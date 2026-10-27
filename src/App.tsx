@@ -1,5 +1,11 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 
+const assetUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/'
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path
+  return `${base}${cleanPath}`
+}
+
 const sections = ['intro', 'work', 'about', 'background', 'references', 'contact']
 const sectionLabels: Record<string, string> = {
   work: 'Recent projects',
@@ -40,7 +46,7 @@ const workProjects = [
     clientDisplay: 'Global paint manufacturer',
     tags: ['AI Assistant', 'User interview', 'Strategy workshop', 'RAG'],
     description: 'Professional painters were trapped in manual, error-prone workflows consuming up to 20% of their billable time; I led the discovery, UX research, requirements translation, and PoC validation for an AI co-pilot that automates quoting and delivers instant technical documentation.',
-    image: '/ai-painter-assistant-cover.jpg',
+    image: assetUrl('/ai-painter-assistant-cover.jpg'),
     imageAlt: 'Painter measuring a wall and preparing a quote on a tablet',
     icons: ['sparkle', 'palette', 'phone'],
     detail: 'A technical co-pilot designed to give painting contractors reliable, product-specific guidance while they work. The discovery focused on understanding where manual processes create delays and risk, then translating verified technical information into a more useful on-site tool.',
@@ -60,7 +66,7 @@ const workProjects = [
     clientDisplay: 'Largest discount retail network in Poland',
     tags: ['q-commerce', "biggest Poland’s retailer", 'complex ecosystem', 'mobile app'],
     description: 'An in-house q-commerce mobile application built for the largest discount retail network in Poland to transition away from a third-party platform, establish full control over user data and promotions, and support high-frequency grocery delivery.',
-    image: '/retail-speed-logistics-cover.jpeg',
+    image: assetUrl('/retail-speed-logistics-cover.jpeg'),
     imageAlt: 'Courier delivering groceries on a scooter in the city',
     icons: ['store', 'bolt', 'phone'],
     detail: 'We designed a customer-facing mobile application tailored for high-frequency retail, establishing full control over the user shopping journey and setting the foundation for future international geographic expansion.',
@@ -80,7 +86,7 @@ const workProjects = [
     clientDisplay: 'Lufthansa',
     tags: ['Live Activity', 'iOS & Android', 'user interview', 'usability testing'],
     description: 'Reducing travel anxiety with real-time flight status updates on the Lock Screen.',
-    image: '/lufthansa-live-activities-cover.jpg',
+    image: assetUrl('/lufthansa-live-activities-cover.jpg'),
     imageAlt: 'Traveler checking flight updates on a phone in a Lufthansa airport lounge',
     icons: ['plane', 'suitcase', 'phone'],
     detail: 'A real-time travel companion bringing useful flight updates to the Lock Screen. By testing realistic journeys and airport conditions, the work explored how to provide timely gate and boarding information without asking travelers to repeatedly open the app.',
@@ -100,7 +106,7 @@ const workProjects = [
     clientDisplay: 'Lufthansa',
     tags: ['Lufthansa', 'complex system', 'UX research', 'usability testing'],
     description: 'Redesigning the baggage reporting flow to reduce travel stress.',
-    image: '/lufthansa-baggage-reporting-cover.jpg',
+    image: assetUrl('/lufthansa-baggage-reporting-cover.jpg'),
     imageAlt: 'Family traveling through an airport with their luggage',
     icons: ['plane', 'suitcase', 'phone'],
     detail: 'A clearer baggage recovery experience for passengers dealing with lost luggage. User journey mapping and usability testing informed a redesigned reporting flow, making the process easier to follow and its status updates more transparent.',
@@ -120,7 +126,7 @@ const workProjects = [
     clientDisplay: 'MakroMapa',
     tags: ['mobile app', 'UX/UI design', 'user research', 'promotion'],
     description: 'A nutrition-tracking app born from a personal frustration with estimating macros while eating out. I worked on UX/UI design, research, and promoting MakroMapa, gaining hands-on experience with interface patterns, component systems, and product validation.',
-    image: '/macronutrient-tracker-cover.jpg',
+    image: assetUrl('/macronutrient-tracker-cover.jpg'),
     imageAlt: 'Two people reviewing a meal together at a restaurant',
     icons: ['phone', 'leaf', 'community'],
     detail: 'My husband and I built a restaurant macro tracker for the Polish market. He led Flutter development while I worked as a UX/UI designer, focusing on research, interface design, and promoting the app. Our promotional efforts grew an organic community of nearly 1,000 followers.',
@@ -276,11 +282,11 @@ function AIPainterCaseStudy() {
         </div>
         <div className="ai-discovery-gallery">
           <figure>
-            <img src="/ai-painter-contractor-interview-research.avif" alt="Contractor interview research plan, participant schedule, and synthesis" loading="lazy" />
+            <img src={assetUrl('/ai-painter-contractor-interview-research.avif')} alt="Contractor interview research plan, participant schedule, and synthesis" loading="lazy" />
             <figcaption>Contractor interviews: research plan and synthesis</figcaption>
           </figure>
           <figure>
-            <img src="/ai-painter-micro-poc-workshop-agenda.avif" alt="Micro-PoC workshop agenda, activities, and synthesis" loading="lazy" />
+            <img src={assetUrl('/ai-painter-micro-poc-workshop-agenda.avif')} alt="Micro-PoC workshop agenda, activities, and synthesis" loading="lazy" />
             <figcaption>Micro-PoC workshop: agenda, activities, and outputs</figcaption>
           </figure>
         </div>
@@ -296,11 +302,11 @@ function AIPainterCaseStudy() {
         </div>
         <div className="ai-discovery-gallery">
           <figure>
-            <img src="/ai-painter-opportunity-solution-tree.png" alt="Opportunity Solution Tree mapping contractor opportunities and proof-of-concept solutions" loading="lazy" />
+            <img src={assetUrl('/ai-painter-opportunity-solution-tree.png')} alt="Opportunity Solution Tree mapping contractor opportunities and proof-of-concept solutions" loading="lazy" />
             <figcaption>Opportunity Solution Tree — PoC phase</figcaption>
           </figure>
           <figure>
-            <img src="/ai-painter-micro-poc-workshop.png" alt="Workshop agenda and activity map for defining Micro-PoC scope" loading="lazy" />
+            <img src={assetUrl('/ai-painter-micro-poc-workshop.png')} alt="Workshop agenda and activity map for defining Micro-PoC scope" loading="lazy" />
             <figcaption>Micro-PoC scope-setting workshop</figcaption>
           </figure>
         </div>
@@ -316,7 +322,7 @@ function AIPainterCaseStudy() {
           </ul>
         </div>
         <figure className="ai-product-path-figure">
-          <img className="ai-product-path" src="/ai-painter-product-path.avif" alt="Product path diagram for the AI Painter Assistant" loading="lazy" />
+          <img className="ai-product-path" src={assetUrl('/ai-painter-product-path.avif')} alt="Product path diagram for the AI Painter Assistant" loading="lazy" />
           <figcaption>Product path</figcaption>
         </figure>
       </CaseStudyAccordion>
@@ -343,7 +349,7 @@ function AIPainterCaseStudy() {
           </ul>
         </div>
         <figure className="ai-business-value-figure">
-          <img src="/ai-painter-business-value.avif" alt="Strategic dual value for contractors and the manufacturer" loading="lazy" />
+          <img src={assetUrl('/ai-painter-business-value.avif')} alt="Strategic dual value for contractors and the manufacturer" loading="lazy" />
           <figcaption>Business value and strategic ROI</figcaption>
         </figure>
       </CaseStudyAccordion>
@@ -376,7 +382,7 @@ function QCommerceCaseStudy() {
           <p>The goal was to transition away from a third-party platform and create a frictionless, intuitive mobile shopping experience from the ground up—bridging physical retail efficiency with rapid digital delivery.</p>
           <p>Operating in a fast-paced cross-functional environment, I collaborated closely with a Product Manager, 2 iOS developers, 2 Android developers, QA engineers, and key client stakeholders. As the project scaled, a second Product Designer joined to support the expanding scope.</p>
           <figure className="ai-case-figure">
-            <img src="/qcommerce-project-team.png" alt="Q-commerce project team outside the retail location" loading="lazy" />
+            <img src={assetUrl('/qcommerce-project-team.png')} alt="Q-commerce project team outside the retail location" loading="lazy" />
             <figcaption>The project team at the retail location.</figcaption>
           </figure>
         </div>
@@ -415,7 +421,7 @@ function QCommerceCaseStudy() {
             <li><strong>Quality alignment:</strong> Worked with QA to establish scope, test scenarios, and operational criteria for UAT and Friends &amp; Family release preparation.</li>
           </ul>
           <figure className="ai-case-figure ai-case-figure-map">
-            <img src="/qcommerce-application-map.png" alt="Application map prepared at the start of the q-commerce project based on its requirements" loading="lazy" />
+            <img src={assetUrl('/qcommerce-application-map.png')} alt="Application map prepared at the start of the q-commerce project based on its requirements" loading="lazy" />
             <figcaption>Application map prepared at the start of the project from its requirements.</figcaption>
           </figure>
         </div>
@@ -476,7 +482,7 @@ function LufthansaLiveActivitiesCaseStudy() {
             <li><strong>Irregular situations:</strong> During delays, passengers urgently wanted to know how long the delay was and whether they would make their connection.</li>
           </ul>
           <figure className="ai-case-figure">
-            <img src="/lufthansa-live-activities-journey-outcomes.webp" alt="Research outcomes and information priorities across pre-boarding, boarding, and in-flight stages" loading="lazy" />
+            <img src={assetUrl('/lufthansa-live-activities-journey-outcomes.webp')} alt="Research outcomes and information priorities across pre-boarding, boarding, and in-flight stages" loading="lazy" />
             <figcaption>Passenger needs and information priorities across key phases of the journey.</figcaption>
           </figure>
         </div>
@@ -492,11 +498,11 @@ function LufthansaLiveActivitiesCaseStudy() {
             <li><strong>Pains vs. Needs matrix:</strong> Translated testing feedback into structured matrices, turning user frustrations into actionable UI design guidelines.</li>
           </ol>
           <figure className="ai-case-figure">
-            <img src="/lufthansa-live-activities-research-process.png" alt="Iterative research and validation process mapping passenger pain points to technical solutions" loading="lazy" />
+            <img src={assetUrl('/lufthansa-live-activities-research-process.png')} alt="Iterative research and validation process mapping passenger pain points to technical solutions" loading="lazy" />
             <figcaption>Iterative research and validation: mapping passenger pain points to technical solutions.</figcaption>
           </figure>
           <figure className="ai-case-figure">
-            <img src="/lufthansa-live-activities-test-scenario.png" alt="Moderated test scenario with questions for evaluating flight status information and Live Activities prototypes" loading="lazy" />
+            <img src={assetUrl('/lufthansa-live-activities-test-scenario.png')} alt="Moderated test scenario with questions for evaluating flight status information and Live Activities prototypes" loading="lazy" />
             <figcaption>Moderated test scenarios used to evaluate clarity, usefulness, and passenger needs.</figcaption>
           </figure>
         </div>
@@ -517,7 +523,7 @@ function LufthansaLiveActivitiesCaseStudy() {
           <p>Post-launch performance metrics are not available because I moved to a new project before rollout. In collaboration with PMs and engineering leads, we established foundational tracking frameworks for user interaction, expansion rates, and widget data reliability.</p>
           <p>The research, AI-assisted synthesis, and prototype validation established a scalable cross-platform foundation for reducing passenger uncertainty and travel anxiety.</p>
           <figure className="ai-case-figure ai-case-figure-phone">
-            <img src="/lufthansa-live-activities-update.png" alt="Lufthansa app update announcement introducing the Live Activities feature" loading="lazy" />
+            <img src={assetUrl('/lufthansa-live-activities-update.png')} alt="Lufthansa app update announcement introducing the Live Activities feature" loading="lazy" />
             <figcaption>The Lufthansa app update introducing Live Activities and real-time flight updates.</figcaption>
           </figure>
         </div>
@@ -605,7 +611,7 @@ function LufthansaBaggageReportingCaseStudy() {
             <li><strong>Clear next steps:</strong> Explicit descriptions, icons, and real-time status guidance reassured passengers that their report had been submitted correctly.</li>
           </ul>
           <figure className="ai-baggage-figure">
-            <img src="/lufthansa-baggage-testing-assumptions.webp" alt="Testing assumptions for the Lufthansa baggage reporting flow" loading="lazy" />
+            <img src={assetUrl('/lufthansa-baggage-testing-assumptions.webp')} alt="Testing assumptions for the Lufthansa baggage reporting flow" loading="lazy" />
             <figcaption>Testing assumptions: validating the reporting flow and passenger details.</figcaption>
           </figure>
         </div>
@@ -626,7 +632,7 @@ function LufthansaBaggageReportingCaseStudy() {
             <li><strong>Reassuring status feedback:</strong> Added contextual status indicators to confirm what happens after a report is submitted.</li>
           </ul>
           <figure className="ai-baggage-figure">
-            <img src="/lufthansa-baggage-overview-redesign.png" alt="Redesigned Lufthansa baggage overview with expanded passenger baggage details and a persistent report button" loading="lazy" />
+            <img src={assetUrl('/lufthansa-baggage-overview-redesign.png')} alt="Redesigned Lufthansa baggage overview with expanded passenger baggage details and a persistent report button" loading="lazy" />
             <figcaption>Redesigned baggage overview with passenger details and a reporting action that stays visible.</figcaption>
           </figure>
         </div>
@@ -661,7 +667,7 @@ function MacronutrientTrackerCaseStudy() {
           <p className="ai-case-lead">In 2019, tracking daily macros while eating out felt like a guessing game. Seeing a gap in the Polish market for a restaurant macro tracker, my husband and I decided to build MakroMapa.</p>
           <p>My husband led Flutter development while I worked as a UX/UI designer, carried out research, and promoted the app. Our promotion grew an organic community of nearly <strong>1,000 followers</strong>. After maintaining the app for three years without a validated business model, we recognized that we had been building feature-driven UI based on personal assumptions rather than a real product strategy.</p>
           <figure className="ai-case-figure">
-            <img src="/makromapa-add-dish-flow.png" alt="MakroMapa flow for adding a restaurant dish, from choosing a place to submitting its nutritional information" loading="lazy" />
+            <img src={assetUrl('/makromapa-add-dish-flow.png')} alt="MakroMapa flow for adding a restaurant dish, from choosing a place to submitting its nutritional information" loading="lazy" />
             <figcaption>Adding a dish in MakroMapa: from selecting a place to submitting its nutritional details (2019).</figcaption>
           </figure>
         </div>
@@ -703,11 +709,11 @@ function MacronutrientTrackerCaseStudy() {
           <p>This hands-on experience strengthened my UX/UI design practice and taught me to pair design and research with thoughtful app promotion and early validation.</p>
           <p>We did not track detailed financial or retention metrics. The figures we can substantiate are the organic community growth to nearly 1,000 followers and app store maintenance fees paid for 1.5 years.</p>
           <figure className="ai-case-figure ai-case-figure-phone">
-            <img src="/makromapa-google-play-early-access.jpg" alt="MakroMapa listed in Google Play early access on a phone in 2019" loading="lazy" />
+            <img src={assetUrl('/makromapa-google-play-early-access.jpg')} alt="MakroMapa listed in Google Play early access on a phone in 2019" loading="lazy" />
             <figcaption>MakroMapa in Google Play early access (2019).</figcaption>
           </figure>
           <figure className="ai-case-figure">
-            <img src="/makromapa-app-store-presentation.png" alt="Promotional presentation of an early MakroMapa app version for the App Store in 2019" loading="lazy" />
+            <img src={assetUrl('/makromapa-app-store-presentation.png')} alt="Promotional presentation of an early MakroMapa app version for the App Store in 2019" loading="lazy" />
             <figcaption>Promotional presentation of an early MakroMapa app version for the App Store (2019).</figcaption>
           </figure>
         </div>
@@ -1023,7 +1029,7 @@ export default function App() {
   const [gridMode, setGridMode] = useState(false)
   const [loaderKey, setLoaderKey] = useState(0)
   const [activeProject, setActiveProject] = useState<WorkProject | null>(() => (
-    workProjects.find((project) => window.location.pathname === `/work/${project.slug}`) ?? null
+    workProjects.find((project) => window.location.pathname.endsWith(`/work/${project.slug}`)) ?? null
   ))
   const audienceRowRef = useRef<HTMLDivElement>(null)
   const audienceButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({})
@@ -1075,7 +1081,7 @@ export default function App() {
 
   useEffect(() => {
     const syncProjectRoute = () => {
-      setActiveProject(workProjects.find((project) => window.location.pathname === `/work/${project.slug}`) ?? null)
+      setActiveProject(workProjects.find((project) => window.location.pathname.endsWith(`/work/${project.slug}`)) ?? null)
     }
     window.addEventListener('popstate', syncProjectRoute)
     return () => window.removeEventListener('popstate', syncProjectRoute)
@@ -1096,7 +1102,8 @@ export default function App() {
   }, [activeProject])
 
   const openProject = (project: WorkProject) => {
-    window.history.pushState({}, '', `/work/${project.slug}`)
+    const basePath = (import.meta.env.BASE_URL || '/').replace(/\/$/, '')
+    window.history.pushState({}, '', `${basePath}/work/${project.slug}`)
     setActiveProject(project)
     setMenuOpen(false)
     setLoaderKey((key) => key + 1)
@@ -1106,7 +1113,8 @@ export default function App() {
   const goTo = (id: string) => {
     if (id === 'intro') {
       if (activeProject) {
-        window.history.pushState({}, '', '/')
+        const basePath = import.meta.env.BASE_URL || '/'
+        window.history.pushState({}, '', basePath)
         setAudience('For everyone')
         setActiveProject(null)
       }
@@ -1267,7 +1275,7 @@ export default function App() {
                           href={link.href}
                           key={link.label}
                           onClick={(event) => {
-                            const project = workProjects.find((item) => link.href === `/work/${item.slug}`)
+                            const project = workProjects.find((item) => link.href.endsWith(`/work/${item.slug}`))
                             if (project) {
                               event.preventDefault()
                               openProject(project)
@@ -1330,13 +1338,13 @@ export default function App() {
               <p className="remote-note">I love working with the team offline, but I'm also available for remote-friendly work.</p>
               <div className="contact-actions">
                 <a className="social-link" href="https://www.linkedin.com/in/agnieszka-malik/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-                <a className="cv-link" href="/agnieszka-malik-cv.pdf" download="agnieszka-malik-cv.pdf">Download CV ↓</a>
+                <a className="cv-link" href={assetUrl('/agnieszka-malik-cv.pdf')} download="agnieszka-malik-cv.pdf">Download CV ↓</a>
               </div>
             </div>
             <figure>
               <img
                 className={theme < (7 / (themeDotCount - 1)) * 100 ? 'theme-tinted' : ''}
-                src="/aga-malik-contact-portrait.png"
+                src={assetUrl('/aga-malik-contact-portrait.png')}
                 alt="Aga Malik"
               />
             </figure>

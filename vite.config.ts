@@ -10,20 +10,24 @@ import siteConfiguration from './.figma/make/site.json'
 export default defineConfig(({ mode }) => {
   // .figma/make/deploy-preview passes `--mode development` for cached-preview builds.
   const emitSourcemaps = mode === 'development'
+  const base = process.env.FIGMA_PUBLIC_URL
+    ? `${process.env.FIGMA_PUBLIC_URL}/`
+    : process.env.BASE_URL || (process.env.NODE_ENV === 'production' ? '/agamalik/' : '/')
 
   return {
-    base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : '/',
+    base,
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
     },
     plugins: [
-react(),
+      react(),
       tailwindcss(),
       figmaSiteConfiguration(siteConfiguration),
       figmaErrorOverlayReplay(),
       figmaReactRefreshBoundaryFallback(),
       figmaMakeKitPlugin({ storiesGlob: '/src/**/*.stories.{ts,tsx,js,jsx}' }),
+      githubPagesSpa(),
     ],
     resolve: {
       alias: {
@@ -387,3 +391,23 @@ function figmaMakeKitPlugin(options: { storiesGlob: string | string[] }): Plugin
     },
   }
 }
+
+/**
+ * Emits 404.html copying index.html so GitHub Pages can route SPA URLs directly.
+ */
+function githubPagesSpa(): Plugin {
+  return {
+    name: 'github-pages-spa',
+    apply: 'build',
+    async closeBundle() {
+      const fs = await import('node:fs')
+      const path = await import('node:path')
+      const indexPath = path.resolve(process.cwd(), './dist/index.html')
+      const targetPath = path.resolve(process.cwd(), './dist/404.html')
+      if (fs.existsSync(indexPath)) {
+        fs.copyFileSync(indexPath, targetPath)
+      }
+    },
+  }
+}
+

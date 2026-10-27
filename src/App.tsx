@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 
 const assetUrl = (path: string) => {
+  if (path.startsWith('http://') || path.startsWith('https://')) return path
   const base = import.meta.env.BASE_URL || '/'
   const cleanPath = path.startsWith('/') ? path.slice(1) : path
   return `${base}${cleanPath}`

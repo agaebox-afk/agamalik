@@ -18,10 +18,10 @@ const themeDotCount = 12
 
 const audienceCopy: Record<string, string[]> = {
   'For everyone': [
-    'Product designer with 7 years of experience. Curious and direct, I like turning broken things into good ones and building the kind of team atmosphere where people do their best work.',
+    'Product designer with six years of experience and part of the team behind Best Airline App 2024. Curious and direct, I like turning broken things into good ones and building the kind of team atmosphere where people do their best work.',
   ],
   Recruiters: [
-    'I’m a product designer with 7 years of experience. Curious, quick to learn and reliable: when I say I’ll do it, it gets done. I use AI thoughtfully and like setting the standards for how a team works with it. I’m looking for a product that needs improving, where I can shape decisions and move metrics. Warsaw-based, open to hybrid, remote or on-site.',
+    'I’m a product designer with six years of experience, part of the team behind Best Airline App 2024. I use AI thoughtfully and like setting the standards for how a team works with it. I’m looking for a product that needs improving, where I can shape decisions and move metrics. Warsaw-based, open to hybrid, remote or on-site.',
   ],
   Designers: [
     'I believe the best teams are built on complementary strengths, not uniformity. I focus on creating a space where every voice is heard, ensuring we look at problems from all angles before committing to a direction.',

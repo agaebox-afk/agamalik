@@ -786,11 +786,12 @@ const beyondSkills = [
   },
   {
     title: 'I let evidence lead, and I look in unexpected places',
-    summary: <>For Lufthansa, I ran <strong>13 Jobs-to-be-Done interviews</strong> with business travelers and used them to align the product trio around a <strong>5% app adoption goal</strong>. In another project, a survey of 186 contractors showed that <strong>33% faced serious delays</strong> waiting for technical advice. <strong>That single number defined what we built.</strong> After launch, I keep measuring: usability scores, task completion, click-through.</>,
+    summary: <>For Lufthansa, I designed a key part of the app, which won <strong>Best Airline App 2024</strong> at the World Aviation Festival. I ran <strong>13 Jobs-to-be-Done interviews</strong> with business travelers and used them to align the product trio around a <strong>5% app adoption goal</strong>. In another project, a survey of 186 contractors showed that <strong>33% faced serious delays</strong> waiting for technical advice. <strong>That single number defined what we built.</strong> After launch, I keep measuring: usability scores, task completion, click-through.</>,
     details: [],
     links: [
       { label: 'Lufthansa case', href: '/work/lufthansa-live-activities' },
       { label: 'AI assistant case', href: '/work/ai-painter-assistant' },
+      { label: 'Award announcement', href: 'https://newsroom.lufthansagroup.com/en/lufthansa-group-awarded-best-airline-app-2024-worldwide/' },
     ],
   },
   {
@@ -1282,6 +1283,8 @@ export default function App() {
                               openProject(project)
                             }
                           }}
+                          target={link.href.startsWith('http') ? '_blank' : undefined}
+                          rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                         >
                           {link.label}<span aria-hidden="true"> ↗</span>
                         </a>

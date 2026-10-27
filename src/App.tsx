@@ -1189,6 +1189,7 @@ export default function App() {
         </section>
 
         <section id="work" className="reveal">
+          <h2 className="section-title beyond-title"><span className="beyond-title-word">Recent</span> projects</h2>
           <div className="work-list">
             {workProjects.map((project) => (
               <article className="work-row work-showcase-item" key={project.slug}>

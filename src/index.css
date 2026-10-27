@@ -135,10 +135,10 @@ section { min-height: 70vh; padding: 80px 0 180px; scroll-margin-top: 20px; }
 @keyframes copyIn { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
 .section-title { font-size: clamp(52px, 6.5vw, 104px); line-height: .98; letter-spacing: -.055em; font-weight: 500; margin: 0 0 92px; }
 .beyond-title-word { display: inline-block; }
-.work-list { display: grid; gap: clamp(150px, 22vh, 220px); }
-.work-showcase-item { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(180px, .85fr); column-gap: clamp(28px, 4vw, 56px); align-items: start; width: min(100%, 900px); padding: 24px; border: 0; opacity: 1; }
+.work-list { display: grid; gap: clamp(120px, 17.6vh, 176px); }
+.work-showcase-item { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(180px, .85fr); column-gap: clamp(28px, 4vw, 56px); align-items: start; width: min(100%, 900px); padding: 24px; border: 0; opacity: 1; transition: opacity .25s ease; }
 .work-row.work-showcase-item { padding: 24px; }
-.work-list:hover .work-showcase-item { opacity: .55; }
+.work-list:hover .work-showcase-item { opacity: .4; }
 .work-list .work-showcase-item:hover { opacity: 1; }
 .work-project-title-column, .work-project-info-column { min-width: 0; }
 .work-project-link { display: block; width: fit-content; max-width: 100%; margin: 0; padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; }
@@ -149,8 +149,8 @@ section { min-height: 70vh; padding: 80px 0 180px; scroll-margin-top: 20px; }
 .work-project-meta > span + span::before { content: '·'; margin-right: 8px; }
 .work-project-meta .work-undisclosed { color: var(--muted); font-size: inherit; }
 .work-row.work-showcase-item .work-project-info-column > p { display: -webkit-box; max-width: 260px; margin: 0; overflow: hidden; color: var(--text); font-size: 11px; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
-.work-row { padding: 24px 0 56px; border-top: 1px solid color-mix(in srgb, var(--text) 18%, transparent); opacity: .52; transition: opacity .25s ease; }
-.work-list:hover .work-row { opacity: .2; }
+.work-row { padding: 24px 0 56px; border-top: 1px solid color-mix(in srgb, var(--text) 18%, transparent); opacity: 1; transition: opacity .25s ease, border-color .25s ease; }
+.work-list:hover .work-row { opacity: .4; }
 .work-list .work-row:hover { opacity: 1; }
 .work-row.work-showcase-item, .site.grid-mode .work-row.work-showcase-item { border: 0; }
 .project-icon { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
@@ -251,7 +251,7 @@ section { min-height: 70vh; padding: 80px 0 180px; scroll-margin-top: 20px; }
 .project-next { padding-top: 110px; }
 .project-next a { display: inline-flex; align-items: center; gap: 10px; color: inherit; font-size: 16px; text-decoration: none; transition: color .2s ease; }
 .project-next a:hover { color: var(--accent); }
-.work-row { padding: 18px 0 0; border: 0; border-top: 1px solid color-mix(in srgb, var(--text) 18%, transparent); opacity: 1; transition: border-color .25s ease; }
+.work-row { padding: 18px 0 0; border: 0; border-top: 1px solid color-mix(in srgb, var(--text) 18%, transparent); opacity: 1; transition: opacity .25s ease, border-color .25s ease; }
 .site.grid-mode .work-row.work-showcase-item { border-top-color: var(--text); }
 .work-top { display: flex; justify-content: space-between; }
 .muted, .work-row p { color: var(--muted); transition: color .4s ease; }
@@ -372,7 +372,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .beyond-intro { margin-bottom: 56px; font-size: 28px; }
   .work-row h2 { font-size: clamp(43px, 13vw, 66px); }
   .work-row p { font-size: 15px; }
-  .work-list { gap: 96px; }
+  .work-list { gap: 77px; }
   .work-row.work-showcase-item { grid-template-columns: 1fr; row-gap: 18px; padding: 20px 12px; }
   .work-project-link h3 { font-size: clamp(32px, 9.5vw, 46px); }
   .work-project-meta { margin-top: 0; font-size: 12px; }

@@ -533,47 +533,6 @@ function LufthansaLiveActivitiesCaseStudy() {
   )
 }
 
-function PortfolioScrollNote() {
-  const stageRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const stage = stageRef.current
-    if (!stage) return
-    const endingHeading = document.querySelector('.work-showcase-item:nth-child(2) .work-project-link h3')
-    if (!endingHeading) return
-
-    let frame = 0
-    const updateVisibility = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(() => {
-        const { top, height } = stage.getBoundingClientRect()
-        const viewportHeight = window.innerHeight
-        const endingHeadingTop = endingHeading.getBoundingClientRect().top
-        const fadeIn = Math.min(1, Math.max(0, (viewportHeight - (top + height)) / (viewportHeight * 0.15)))
-        const fadeOut = Math.min(1, Math.max(0, (endingHeadingTop - viewportHeight * 0.85) / (viewportHeight * 0.15)))
-        const visibility = Math.min(fadeIn, fadeOut)
-        stage.style.setProperty('--scroll-note-visibility', visibility.toFixed(3))
-      })
-    }
-
-    updateVisibility()
-    window.addEventListener('scroll', updateVisibility, { passive: true })
-    window.addEventListener('resize', updateVisibility)
-
-    return () => {
-      cancelAnimationFrame(frame)
-      window.removeEventListener('scroll', updateVisibility)
-      window.removeEventListener('resize', updateVisibility)
-    }
-  }, [])
-
-  return (
-    <div ref={stageRef} className="portfolio-scroll-note-stage">
-      <p className="portfolio-scroll-note">Make yourself comfy and enjoy</p>
-    </div>
-  )
-}
-
 function LufthansaBaggageReportingCaseStudy() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const toggleSection = (id: string) => setOpenSection((current) => current === id ? null : id)
@@ -1228,8 +1187,6 @@ export default function App() {
             {audience === 'Video' && <VideoPanel />}
           </div>
         </section>
-
-        <PortfolioScrollNote />
 
         <section id="work" className="reveal">
           <div className="work-list">

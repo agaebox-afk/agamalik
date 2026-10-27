@@ -101,8 +101,6 @@ main { margin-left: var(--rail-width); padding: var(--intro-top) clamp(48px, 5vw
 main.project-main { padding-top: 68px; }
 section { min-height: 70vh; padding: 80px 0 180px; scroll-margin-top: 20px; }
 .intro { padding-top: 0; min-height: calc(100vh - var(--intro-top)); }
-.portfolio-scroll-note-stage { --scroll-note-visibility: 0; display: grid; min-height: clamp(100px, 16vh, 150px); margin: -120px 0 40px; padding-right: clamp(12px, 2vw, 24px); place-items: center end; pointer-events: none; }
-.site main .portfolio-scroll-note { justify-self: end; width: max-content; max-width: none; margin: 0; color: rgb(0 0 0 / 14%); font-family: 'Allura', cursive; font-size: clamp(44px, 4.576vw, 66px); line-height: 1; text-align: right; white-space: nowrap; opacity: var(--scroll-note-visibility); transition: opacity .12s linear; }
 .intro > .ui-label { color: var(--muted); padding-top: 2px; }
 .intro-audience { position: relative; display: flex; align-items: center; flex-wrap: wrap; gap: 10px 24px; margin-bottom: 22px; }
 .intro-audience button { border: 0; background: none; padding: 0; color: color-mix(in srgb, var(--text) 35%, var(--bg)); cursor: pointer; font-size: 14px; letter-spacing: .02em; transition: color .2s ease; display: inline-flex; align-items: center; gap: 6px; }
@@ -367,8 +365,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .video-module { width: calc(100% - 70px); }
   .section-title { margin-bottom: 55px; }
   .section-title, .background-heading h2 { font-size: clamp(43px, 13vw, 66px); }
-  .portfolio-scroll-note-stage { min-height: 100px; margin: -80px 0 40px; padding-right: 12px; }
-  .site main .portfolio-scroll-note { font-size: clamp(24px, 8vw, 42px); }
   .beyond-intro { margin-bottom: 56px; font-size: 28px; }
   .work-row h2 { font-size: clamp(43px, 13vw, 66px); }
   .work-row p { font-size: 15px; }

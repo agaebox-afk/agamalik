@@ -13,7 +13,7 @@ const sectionLabels: Record<string, string> = {
   about: 'Beyond skills',
   background: 'Lifetime milestones',
 }
-const audiences = ['Video', 'For everyone', 'Recruiters', 'Designers', 'Product managers', 'Engineers']
+const audiences = ['For everyone', 'Recruiters', 'Designers', 'Product managers', 'Engineers']
 const themeDotCount = 12
 
 const audienceCopy: Record<string, string[]> = {

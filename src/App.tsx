@@ -160,6 +160,24 @@ function ProjectIcon({ name }: { name: string }) {
   )
 }
 
+function ArrowUpRight({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 10 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="2.2" y1="7.8" x2="7.8" y2="2.2" />
+      <polyline points="3.8 2.2 7.8 2.2 7.8 6.2" />
+    </svg>
+  )
+}
+
 function CaseStudyAccordion({ id, label, title, children, className = '', open, onToggle }: { id: string; label: string; title: string; children: React.ReactNode; className?: string; open: boolean; onToggle: (id: string) => void }) {
   const panelRef = useRef<HTMLDivElement>(null)
   const innerRef = useRef<HTMLDivElement>(null)
@@ -1195,7 +1213,7 @@ export default function App() {
               <article className="work-row work-showcase-item" key={project.slug}>
                 <div className="work-project-title-column">
                   <button className="work-project-link" type="button" onClick={() => openProject(project)}>
-                    <h3>{project.displayTitle}<span aria-hidden="true"> ↗</span></h3>
+                    <h3>{project.displayTitle}<span className="project-arrow" aria-hidden="true"><ArrowUpRight /></span></h3>
                   </button>
                 </div>
                 <div className="work-project-info-column">
@@ -1244,7 +1262,7 @@ export default function App() {
                           target={link.href.startsWith('http') ? '_blank' : undefined}
                           rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                         >
-                          {link.label}<span aria-hidden="true"> ↗</span>
+                          {link.label}<span className="link-arrow" aria-hidden="true"><ArrowUpRight /></span>
                         </a>
                       ))}
                     </div>
@@ -1299,7 +1317,7 @@ export default function App() {
               <a className="big-link" href="mailto:agnieszka.w.malik@gmail.com">agnieszka.w.malik@gmail.com</a>
               <p className="remote-note">I love working with the team offline, but I'm also available for remote-friendly work.</p>
               <div className="contact-actions">
-                <a className="social-link" href="https://www.linkedin.com/in/agnieszka-malik/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a className="social-link" href="https://www.linkedin.com/in/agnieszka-malik/" target="_blank" rel="noreferrer">LinkedIn<span className="link-arrow" aria-hidden="true"><ArrowUpRight /></span></a>
                 <a className="cv-link" href={assetUrl('/agnieszka-malik-cv.pdf')} download="agnieszka-malik-cv.pdf">Download CV ↓</a>
               </div>
             </div>

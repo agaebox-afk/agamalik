@@ -164,16 +164,16 @@ function ArrowUpRight({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 10 10"
+      viewBox="0 0 16 16"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.25"
+      strokeWidth="1.05"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <line x1="2.2" y1="7.8" x2="7.8" y2="2.2" />
-      <polyline points="3.8 2.2 7.8 2.2 7.8 6.2" />
+      <line x1="2" y1="14" x2="14" y2="2" />
+      <polyline points="7.5 2 14 2 14 8.5" />
     </svg>
   )
 }

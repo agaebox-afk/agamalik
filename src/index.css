@@ -19,7 +19,7 @@ button { color: inherit; }
   0%, 94% { opacity: 1; }
   100% { opacity: 0; visibility: hidden; }
 }
-.sidebar { position: fixed; top: 0; bottom: 0; left: 0; width: var(--rail-width); height: 100%; height: 100dvh; max-height: 100dvh; padding: clamp(24px, 4vh, 40px); display: flex; flex-direction: column; z-index: 20; background: var(--bg); overflow: hidden; overscroll-behavior: none; touch-action: none; transition: background-color .4s ease, color .4s ease; }
+.sidebar { position: fixed; top: 0; bottom: 0; left: 0; width: var(--rail-width); height: 100%; height: 100dvh; max-height: 100dvh; --sidebar-pad-x: 40px; padding: clamp(20px, 3.5vh, 40px) var(--sidebar-pad-x); display: flex; flex-direction: column; z-index: 20; background: var(--bg); overflow: hidden; overscroll-behavior: none; touch-action: none; transition: background-color .4s ease, color .4s ease; }
 .sidebar button, .sidebar a, .sidebar input { touch-action: manipulation; }
 .wordmark { appearance: none; position: relative; border: 0; background: none; padding: 0; font-size: 19px; line-height: 1.2; letter-spacing: -.02em; text-align: left; cursor: pointer; display: inline-flex; align-items: baseline; width: fit-content; white-space: nowrap; }
 .wordmark-mark { display: inline-block; flex: 0 0 auto; }
@@ -93,14 +93,14 @@ button { color: inherit; }
   .site.grid-mode .sidebar::before { top: 20px; }
   .site.grid-mode .sidebar::after { bottom: 20px; }
   .site.grid-mode .sidebar nav { position: relative; }
-  .site.grid-mode .sidebar nav::before, .site.grid-mode .sidebar nav::after, .site.grid-mode .theme-control::before { content: ''; position: absolute; left: -20px; width: calc(var(--rail-width) - 20px); height: 1px; background: var(--text); pointer-events: none; }
+  .site.grid-mode .sidebar nav::before, .site.grid-mode .sidebar nav::after, .site.grid-mode .theme-control::before { content: ''; position: absolute; left: calc(20px - var(--sidebar-pad-x, 40px)); width: calc(var(--rail-width) - 20px); height: 1px; background: var(--text); pointer-events: none; }
   .site.grid-mode .sidebar nav::before { top: -24px; }
   .site.grid-mode .sidebar nav::after { bottom: -24px; }
   .site.grid-mode .theme-control::before { top: 0; }
 }
 
 @media (min-width: 801px) and (max-height: 820px) {
-  .sidebar { padding: 24px 28px; }
+  .sidebar { padding: 20px var(--sidebar-pad-x, 40px); }
   .sidebar nav { margin-top: 28px; }
   .theme-control { padding-top: 12px; gap: 8px; }
 }

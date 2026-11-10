@@ -57,20 +57,20 @@ const workProjects = [
     ],
   },
   {
-    slug: 'retail-speed-logistics',
+    slug: 'biek-biedronka',
     year: '2025',
-    eyebrow: 'q-commerce',
-    displayTitle: 'Designing for retail speed and complex logistics',
-    title: 'Designing for retail speed and complex logistics',
+    eyebrow: 'Biek dla sieci Biedronka',
+    displayTitle: 'Biek: Designing for retail speed and complex logistics',
+    title: 'Biek dla sieci Biedronka: Designing for retail speed and complex logistics',
     category: 'Case study',
-    undisclosed: true,
-    clientDisplay: 'Largest discount retail network in Poland',
-    tags: ['q-commerce', "biggest Poland’s retailer", 'complex ecosystem', 'mobile app'],
-    description: 'An in-house q-commerce mobile application built for the largest discount retail network in Poland to transition away from a third-party platform, establish full control over user data and promotions, and support high-frequency grocery delivery.',
+    undisclosed: false,
+    clientDisplay: 'Biek dla sieci Biedronka',
+    tags: ['Biek', 'Biedronka', 'q-commerce', 'mobile app'],
+    description: 'An in-house q-commerce mobile application (Biek) built for Biedronka, Poland’s largest retail network, to transition away from a third-party platform, establish full control over user data and promotions, and support high-frequency grocery delivery.',
     image: assetUrl('/retail-speed-logistics-cover.jpeg'),
-    imageAlt: 'Courier delivering groceries on a scooter in the city',
+    imageAlt: 'Biek courier delivering groceries on a scooter in the city',
     icons: ['store', 'bolt', 'phone'],
-    detail: 'We designed a customer-facing mobile application tailored for high-frequency retail, establishing full control over the user shopping journey and setting the foundation for future international geographic expansion.',
+    detail: 'We designed Biek, a customer-facing mobile application tailored for high-frequency retail for Biedronka, establishing full control over the user shopping journey and setting the foundation for future international geographic expansion.',
     detailImages: [
       'https://images.unsplash.com/photo-1603905179139-d6d7b88b2e4a?auto=format&fit=crop&w=1800&q=85',
       'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=85',
@@ -389,36 +389,37 @@ function QCommerceCaseStudy() {
   return (
     <div className="ai-case-study">
       <div className="ai-case-facts">
+        <div><span className="ui-label">Client</span><p>Biek dla sieci Biedronka</p></div>
         <div><span className="ui-label">Role</span><p>Founding Product Designer, leading end-to-end product discovery and UX/UI design; building app components from a component library created by a second Product Designer</p></div>
-        <div><span className="ui-label">Team</span><p>Product Manager, 2 iOS developers, 2 Android developers, QA engineers, client stakeholders, and a second Product Designer who joined as the project scaled</p></div>
+        <div><span className="ui-label">Team</span><p>Product Manager, 2 iOS developers, 2 Android developers, QA engineers, Biedronka stakeholders, and a second Product Designer who joined as the project scaled</p></div>
         <div><span className="ui-label">Timeline</span><p>Q4 2024 – Q3 2025</p></div>
-        <div><span className="ui-label">Outcome</span><p>Established a proprietary, scalable q-commerce mobile ecosystem with full control over the shopping journey, ready for future geographic expansion.</p></div>
+        <div><span className="ui-label">Outcome</span><p>Established Biek, a proprietary, scalable q-commerce mobile ecosystem for Biedronka with full control over the shopping journey, ready for future geographic expansion.</p></div>
       </div>
 
       <CaseStudyAccordion id="qcommerce-overview" open={openSection === 'qcommerce-overview'} onToggle={toggleSection} label="01 / Project overview" title="What was this project about, and who was it for?">
         <div className="ai-case-copy">
-          <p className="ai-case-lead">As the founding Product Designer, I led end-to-end product discovery and UX/UI design for a high-performance q-commerce mobile application built for the largest discount retail network in Poland.</p>
-          <p>The goal was to transition away from a third-party platform and create a frictionless, intuitive mobile shopping experience from the ground up—bridging physical retail efficiency with rapid digital delivery.</p>
-          <p>Operating in a fast-paced cross-functional environment, I collaborated closely with a Product Manager, 2 iOS developers, 2 Android developers, QA engineers, and key client stakeholders. As the project scaled, a second Product Designer joined to support the expanding scope.</p>
+          <p className="ai-case-lead">As the founding Product Designer, I led end-to-end product discovery and UX/UI design for Biek, a high-performance q-commerce mobile application built for Biedronka (the largest retail network in Poland).</p>
+          <p>The goal was to transition away from a third-party platform and create a frictionless, intuitive mobile shopping experience from the ground up—bridging Biedronka’s physical retail efficiency with rapid digital delivery.</p>
+          <p>Operating in a fast-paced cross-functional environment, I collaborated closely with a Product Manager, 2 iOS developers, 2 Android developers, QA engineers, and key Biedronka stakeholders. As the project scaled, a second Product Designer joined to support the expanding scope.</p>
           <figure className="ai-case-figure">
-            <img src={assetUrl('/qcommerce-project-team.png')} alt="Q-commerce project team outside the retail location" loading="lazy" />
-            <figcaption>The project team at the retail location.</figcaption>
+            <img src={assetUrl('/qcommerce-project-team.png')} alt="Biek project team outside the Biedronka retail location" loading="lazy" />
+            <figcaption>The Biek project team at the Biedronka retail location.</figcaption>
           </figure>
         </div>
       </CaseStudyAccordion>
 
       <CaseStudyAccordion id="qcommerce-problem" open={openSection === 'qcommerce-problem'} onToggle={toggleSection} label="02 / Problem" title="What problem needed solving, and why did it matter?">
         <div className="ai-case-copy">
-          <p>The objective was to design a frictionless, intuitive mobile shopping experience from the ground up. Key challenges included structuring a comprehensive information architecture and designing intuitive user flows for onboarding, catalog browsing, advanced search, barcode scanning, cart management, transparent promotion conditions, and real-time order status tracking with interactive maps.</p>
-          <p>Relying on an external vendor restricted access to granular user behavior data, limited assortment management efficiency, and prevented the business from launching custom promotional mechanisms and tailored loyalty programs. An in-house platform would restore ownership and enable a high-frequency experience that could scale.</p>
+          <p>The objective was to design Biek as a frictionless, intuitive mobile shopping experience from the ground up. Key challenges included structuring a comprehensive information architecture and designing intuitive user flows for onboarding, catalog browsing, advanced search, barcode scanning, cart management, transparent promotion conditions, and real-time order status tracking with interactive maps.</p>
+          <p>Relying on an external vendor restricted access to granular user behavior data, limited assortment management efficiency, and prevented Biedronka from launching custom promotional mechanisms and tailored loyalty programs. An in-house platform would restore brand and data ownership and enable a high-frequency experience that could scale.</p>
         </div>
       </CaseStudyAccordion>
 
       <CaseStudyAccordion id="qcommerce-role" open={openSection === 'qcommerce-role'} onToggle={toggleSection} label="03 / My role" title="What was my role, and what did I own?">
         <div className="ai-case-copy">
-          <p>As the founding Product Designer, I led the end-to-end design strategy from day zero (Q4 2024 – Q3 2025), owning product discovery and UX/UI design through UAT and Friends &amp; Family release preparation. A second Product Designer later created the component library; I built app components using that library. With the project timeline, there was no time to establish a full design system.</p>
+          <p>As the founding Product Designer, I led the end-to-end design strategy from day zero (Q4 2024 – Q3 2025), owning product discovery and UX/UI design for Biek through UAT and Friends &amp; Family release preparation. A second Product Designer later created the component library; I built app components using that library. With the project timeline, there was no time to establish a full design system.</p>
           <ul className="ai-case-list">
-            <li><strong>0-to-1 product strategy and architecture:</strong> Led early discovery, information architecture, low-fidelity prototyping, complete user flow mapping, and the core visual language for the mobile application.</li>
+            <li><strong>0-to-1 product strategy and architecture:</strong> Led early discovery, information architecture, low-fidelity prototyping, complete user flow mapping, and the core visual language for the Biek mobile application.</li>
             <li><strong>Baseline evaluations:</strong> Conducted stakeholder alignment sessions and evaluated other speed-delivery apps to translate logistics and business requirements into intuitive UX patterns.</li>
             <li><strong>Quality alignment and testing preparation:</strong> Worked closely with QA to establish scope, test scenarios, and operational criteria for UAT and Friends &amp; Family release preparation.</li>
           </ul>
@@ -427,34 +428,34 @@ function QCommerceCaseStudy() {
 
       <CaseStudyAccordion id="qcommerce-constraints" open={openSection === 'qcommerce-constraints'} onToggle={toggleSection} label="04 / Constraints" title="What constraints and challenges shaped the work?">
         <div className="ai-case-copy">
-          <p>The project aimed to bridge physical retail efficiency with rapid digital delivery, while designing clear flows for onboarding, catalog browsing, advanced search, barcode scanning, cart management, promotion conditions, and real-time order tracking.</p>
-          <p>The experience needed to support consistent cross-platform execution on iOS and Android while coordinating product, engineering, QA, and client stakeholder needs under a fast-paced delivery schedule.</p>
+          <p>The project aimed to bridge Biedronka’s physical retail efficiency with rapid digital delivery through Biek, while designing clear flows for onboarding, catalog browsing, advanced search, barcode scanning, cart management, promotion conditions, and real-time order tracking.</p>
+          <p>The experience needed to support consistent cross-platform execution on iOS and Android while coordinating product, engineering, QA, and Biedronka client stakeholder needs under a fast-paced delivery schedule.</p>
         </div>
       </CaseStudyAccordion>
 
       <CaseStudyAccordion id="qcommerce-approach" open={openSection === 'qcommerce-approach'} onToggle={toggleSection} label="05 / Approach" title="How did I approach the problem?">
         <div className="ai-case-copy">
           <ul className="ai-case-list">
-            <li><strong>End-to-end discovery and flow mapping:</strong> Mapped the complete user journey—from initial app launch and geo-location address verification to multi-step registration (Google/Apple SSO), dynamic cart views, checkout, and live order tracking.</li>
+            <li><strong>End-to-end discovery and flow mapping:</strong> Mapped the complete user journey for Biek—from initial app launch and geo-location address verification to multi-step registration (Google/Apple SSO), dynamic cart views, checkout, and live order tracking.</li>
             <li><strong>Component-based UI craft:</strong> Built app components using the component library created by a second Product Designer, including snackbars, interactive banners, and Product Detail Page (PDP) layouts for consistent iOS and Android execution. The project timeline did not allow for a full design system.</li>
             <li><strong>Quality alignment:</strong> Worked with QA to establish scope, test scenarios, and operational criteria for UAT and Friends &amp; Family release preparation.</li>
           </ul>
           <figure className="ai-case-figure ai-case-figure-map">
-            <img src={assetUrl('/qcommerce-application-map.png')} alt="Application map prepared at the start of the q-commerce project based on its requirements" loading="lazy" />
-            <figcaption>Application map prepared at the start of the project from its requirements.</figcaption>
+            <img src={assetUrl('/qcommerce-application-map.png')} alt="Application map prepared at the start of the Biek project based on its requirements" loading="lazy" />
+            <figcaption>Biek application map prepared at the start of the project from its requirements.</figcaption>
           </figure>
         </div>
       </CaseStudyAccordion>
 
       <CaseStudyAccordion id="qcommerce-ai" open={openSection === 'qcommerce-ai'} onToggle={toggleSection} label="06 / AI collaboration" title="How did I use AI during the project?">
         <div className="ai-case-copy">
-          <p>Throughout discovery and execution, I integrated AI tools as a strategic co-pilot to brainstorm and challenge design hypotheses, structure backlog tasks, organize work distribution, and accelerate visual inspiration gathering.</p>
+          <p>Throughout discovery and execution, I integrated AI tools as a strategic co-pilot to brainstorm and challenge design hypotheses, structure backlog tasks, organize work distribution, and accelerate visual inspiration gathering for Biek.</p>
         </div>
       </CaseStudyAccordion>
 
       <CaseStudyAccordion id="qcommerce-impact" open={openSection === 'qcommerce-impact'} onToggle={toggleSection} label="07 / Impact &amp; handover" title="What did I deliver, and how was the project handed over?">
         <div className="ai-case-copy">
-          <p>I owned and shaped the product design from initial concept through comprehensive wireframing and high-fidelity UI design. I built app components using the component library created by a second Product Designer, then iterated and refined the core experience through User Acceptance Testing (UAT) and Friends &amp; Family (F&amp;F) release phases.</p>
+          <p>I owned and shaped the product design for Biek from initial concept through comprehensive wireframing and high-fidelity UI design. I built app components using the component library created by a second Product Designer, then iterated and refined the core experience through User Acceptance Testing (UAT) and Friends &amp; Family (F&amp;F) release phases.</p>
           <p>At this milestone, I handed over subsequent product phases to a fellow designer to lead the rollout.</p>
         </div>
       </CaseStudyAccordion>
@@ -709,7 +710,7 @@ const milestones = [
       'Intensive AI capability growth.',
       'Designing full-cycle AI agent flows, including AI Painter Assistant.',
       'Leading workshops for Sektor 3.0.',
-      'Solving ultra-fast grocery delivery architecture at SYZYGY Warsaw.',
+      'Solving ultra-fast grocery delivery architecture for Biedronka (Biek) at SYZYGY Warsaw.',
     ],
   },
   {
@@ -1008,7 +1009,7 @@ export default function App() {
   const [gridMode, setGridMode] = useState(false)
   const [loaderKey, setLoaderKey] = useState(0)
   const [activeProject, setActiveProject] = useState<WorkProject | null>(() => (
-    workProjects.find((project) => window.location.pathname.endsWith(`/work/${project.slug}`)) ?? null
+    workProjects.find((project) => window.location.pathname.endsWith(`/work/${project.slug}`) || (project.slug === 'biek-biedronka' && window.location.pathname.endsWith('/work/retail-speed-logistics'))) ?? null
   ))
   const audienceRowRef = useRef<HTMLDivElement>(null)
   const audienceButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({})
@@ -1060,7 +1061,7 @@ export default function App() {
 
   useEffect(() => {
     const syncProjectRoute = () => {
-      setActiveProject(workProjects.find((project) => window.location.pathname.endsWith(`/work/${project.slug}`)) ?? null)
+      setActiveProject(workProjects.find((project) => window.location.pathname.endsWith(`/work/${project.slug}`) || (project.slug === 'biek-biedronka' && window.location.pathname.endsWith('/work/retail-speed-logistics'))) ?? null)
     }
     window.addEventListener('popstate', syncProjectRoute)
     return () => window.removeEventListener('popstate', syncProjectRoute)
@@ -1148,7 +1149,7 @@ export default function App() {
             <figure className="project-hero-image">
               <img src={activeProject.image} alt={activeProject.imageAlt} />
             </figure>
-            {activeProject.slug === 'ai-painter-assistant' ? <AIPainterCaseStudy /> : activeProject.slug === 'retail-speed-logistics' ? <QCommerceCaseStudy /> : activeProject.slug === 'lufthansa-live-activities' ? <LufthansaLiveActivitiesCaseStudy /> : activeProject.slug === 'lufthansa-baggage-reporting' ? <LufthansaBaggageReportingCaseStudy /> : activeProject.slug === 'macronutrient-tracker' ? <MacronutrientTrackerCaseStudy /> : (
+            {activeProject.slug === 'ai-painter-assistant' ? <AIPainterCaseStudy /> : (activeProject.slug === 'biek-biedronka' || activeProject.slug === 'retail-speed-logistics') ? <QCommerceCaseStudy /> : activeProject.slug === 'lufthansa-live-activities' ? <LufthansaLiveActivitiesCaseStudy /> : activeProject.slug === 'lufthansa-baggage-reporting' ? <LufthansaBaggageReportingCaseStudy /> : activeProject.slug === 'macronutrient-tracker' ? <MacronutrientTrackerCaseStudy /> : (
               <>
                 <div className="project-story">
                   <p className="project-story-lead">{activeProject.description}</p>
@@ -1253,7 +1254,7 @@ export default function App() {
                           href={link.href}
                           key={link.label}
                           onClick={(event) => {
-                            const project = workProjects.find((item) => link.href.endsWith(`/work/${item.slug}`))
+                            const project = workProjects.find((item) => link.href.endsWith(`/work/${item.slug}`) || (item.slug === 'biek-biedronka' && link.href.endsWith('/work/retail-speed-logistics')))
                             if (project) {
                               event.preventDefault()
                               openProject(project)

@@ -253,9 +253,10 @@ function AIPainterCaseStudy() {
     <div className="ai-case-study">
       <div className="ai-case-facts">
         <div><span className="ui-label">Client</span><p>A global paint manufacturer (Undisclosed)</p></div>
+        <div><span className="ui-label">Timeline</span><p>Q4 2025 – Q1 2026</p></div>
+        <div><span className="ui-label">Scope</span><p>End-to-end AI assistant discovery, OST synthesis, and in-store PoC validation</p></div>
+        <div><span className="ui-label">Role</span><p>Product Strategy, UX Research, Discovery, Research Synthesis, Opportunity Solution Tree (OST) Management, UX/UI Alignment, &amp; PoC Validation</p></div>
         <div><span className="ui-label">Team</span><p>Myself (Lead Product Designer), 2 client project managers, and 2 AI developers</p></div>
-        <div><span className="ui-label">Timeline</span><p>2025 Q4–2026 Q1</p></div>
-        <div><span className="ui-label">My role</span><p>Product Strategy, UX Research, Discovery, Research Synthesis, Opportunity Solution Tree (OST) Management, UX/UI Alignment, &amp; PoC Validation</p></div>
         <div><span className="ui-label">Outcome</span><p>Validated an AI assistant PoC tested by 42 contractors across active trade stores, confirming massive demand for automated quoting (82%) and 24/7 product selection (84%).</p></div>
       </div>
 
@@ -388,7 +389,7 @@ function QCommerceCaseStudy() {
 
   return (
     <div className="ai-case-study">
-      <div className="ai-case-facts ai-case-facts-6">
+      <div className="ai-case-facts">
         <div><span className="ui-label">Client</span><p>Biek dla sieci Biedronka</p></div>
         <div><span className="ui-label">Timeline</span><p>Q4 2024 – Q3 2025</p></div>
         <div>
@@ -488,11 +489,12 @@ function LufthansaLiveActivitiesCaseStudy() {
   return (
     <div className="ai-case-study">
       <div className="ai-case-facts">
-        <div><span className="ui-label">Role</span><p>Lead Product Designer &amp; UX Researcher</p></div>
-        <div><span className="ui-label">Team</span><p>iOS and Android developers, Product Owner, Product Manager, and UX researcher</p></div>
+        <div><span className="ui-label">Client</span><p>Lufthansa</p></div>
         <div><span className="ui-label">Timeline</span><p>2024</p></div>
         <div><span className="ui-label">Scope</span><p>Cross-platform flight updates for iOS Live Activities, Android Widgets, and Apple Watch</p></div>
-        <div><span className="ui-label">Outcome</span><p>Established a cross-platform UX foundation and pre-launch tracking framework. Post-launch performance metrics are unavailable because I transitioned to another project before rollout.</p></div>
+        <div><span className="ui-label">Role</span><p>Lead Product Designer &amp; UX Researcher</p></div>
+        <div><span className="ui-label">Team</span><p>iOS and Android developers, Product Owner, Product Manager, and UX researcher</p></div>
+        <div><span className="ui-label">Outcome</span><p>Established a cross-platform UX foundation and pre-launch tracking framework (part of the experience awarded World’s Best Airline App 2024).</p></div>
       </div>
 
       <CaseStudyAccordion id="lufthansa-problem" open={openSection === 'lufthansa-problem'} onToggle={toggleSection} label="01 / Problem" title="What was the core problem?">
@@ -577,10 +579,11 @@ function LufthansaBaggageReportingCaseStudy() {
   return (
     <div className="ai-case-study">
       <div className="ai-case-facts">
-        <div><span className="ui-label">Role</span><p>Lead Product Designer</p></div>
-        <div><span className="ui-label">Team</span><p>iOS and Android developers, Product Owner, Product Manager, and UX researcher</p></div>
+        <div><span className="ui-label">Client</span><p>Lufthansa</p></div>
         <div><span className="ui-label">Timeline</span><p>2024</p></div>
         <div><span className="ui-label">Scope</span><p>UX research, information architecture, prototyping, and UI design for delayed baggage reporting</p></div>
+        <div><span className="ui-label">Role</span><p>Lead Product Designer</p></div>
+        <div><span className="ui-label">Team</span><p>iOS and Android developers, Product Owner, Product Manager, and UX researcher</p></div>
         <div><span className="ui-label">Outcome</span><p>Established a self-service reporting flow informed by passenger research and usability validation. The project focused on experience quality rather than post-launch metrics.</p></div>
       </div>
 
@@ -652,10 +655,11 @@ function MacronutrientTrackerCaseStudy() {
   return (
     <div className="ai-case-study">
       <div className="ai-case-facts">
-        <div><span className="ui-label">Role</span><p>UX/UI Designer, research, and app promotion</p></div>
-        <div><span className="ui-label">Team</span><p>Two co-founders: myself (UX/UI Designer) and my husband (Flutter developer)</p></div>
+        <div><span className="ui-label">Product</span><p>MakroMapa</p></div>
         <div><span className="ui-label">Timeline</span><p>2019–2021</p></div>
         <div><span className="ui-label">Scope</span><p>UX/UI design, research, interface patterns, component systems, and app promotion</p></div>
+        <div><span className="ui-label">Role</span><p>Co-founder &amp; UX/UI Designer</p></div>
+        <div><span className="ui-label">Team</span><p>Two co-founders: myself (UX/UI Designer) and my husband (Flutter developer)</p></div>
         <div><span className="ui-label">Outcome</span><p>Grew an organic community to nearly 1,000 followers and gained practical UX/UI design experience. The app did not achieve a validated business model.</p></div>
       </div>
 

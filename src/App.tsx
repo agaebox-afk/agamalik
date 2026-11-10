@@ -390,9 +390,17 @@ function QCommerceCaseStudy() {
     <div className="ai-case-study">
       <div className="ai-case-facts">
         <div><span className="ui-label">Client</span><p>Biek dla sieci Biedronka</p></div>
+        <div><span className="ui-label">Timeline</span><p>Q4 2024 – Q3 2025</p></div>
+        <div>
+          <span className="ui-label">Public release</span>
+          <p>
+            <a href="https://lnkd.in/p/dD5QwW4v" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+              Announcement on LinkedIn <span className="link-arrow" aria-hidden="true"><ArrowUpRight /></span>
+            </a>
+          </p>
+        </div>
         <div><span className="ui-label">Role</span><p>Founding Product Designer, leading end-to-end product discovery and UX/UI design; building app components from a component library created by a second Product Designer</p></div>
         <div><span className="ui-label">Team</span><p>Product Manager, 2 iOS developers, 2 Android developers, QA engineers, Biedronka stakeholders, and a second Product Designer who joined as the project scaled</p></div>
-        <div><span className="ui-label">Timeline</span><p>Q4 2024 – Q3 2025</p></div>
         <div><span className="ui-label">Outcome</span><p>Established Biek, a proprietary, scalable q-commerce mobile ecosystem for Biedronka with full control over the shopping journey, ready for future geographic expansion.</p></div>
       </div>
 
@@ -457,6 +465,16 @@ function QCommerceCaseStudy() {
         <div className="ai-case-copy">
           <p>I owned and shaped the product design for Biek from initial concept through comprehensive wireframing and high-fidelity UI design. I built app components using the component library created by a second Product Designer, then iterated and refined the core experience through User Acceptance Testing (UAT) and Friends &amp; Family (F&amp;F) release phases.</p>
           <p>At this milestone, I handed over subsequent product phases to a fellow designer to lead the rollout.</p>
+          <p>
+            <a
+              href="https://lnkd.in/p/dD5QwW4v"
+              target="_blank"
+              rel="noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+            >
+              Read the release announcement on LinkedIn <span className="link-arrow" aria-hidden="true"><ArrowUpRight /></span>
+            </a>
+          </p>
         </div>
       </CaseStudyAccordion>
     </div>
@@ -760,7 +778,11 @@ const beyondSkills = [
     title: 'I start with the question, not the screen',
     summary: <>I take products from <strong>discovery to post-launch</strong>, and I like <strong>getting everyone in the room on day one</strong>. My workshops include <strong>developers, sales and support</strong>, because the best insight often sits in people, not only in research. I’m <strong>curious by default</strong>, and <strong>I follow through on what I promise</strong>.</>,
     details: [],
-    links: [{ label: 'AI assistant case', href: '/work/ai-painter-assistant' }],
+    links: [
+      { label: 'Biek case', href: '/work/biek-biedronka' },
+      { label: 'Biek release on LinkedIn', href: 'https://lnkd.in/p/dD5QwW4v' },
+      { label: 'AI assistant case', href: '/work/ai-painter-assistant' },
+    ],
   },
   {
     title: 'I let evidence lead, and I look in unexpected places',

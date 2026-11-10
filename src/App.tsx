@@ -388,13 +388,13 @@ function QCommerceCaseStudy() {
 
   return (
     <div className="ai-case-study">
-      <div className="ai-case-facts">
+      <div className="ai-case-facts ai-case-facts-6">
         <div><span className="ui-label">Client</span><p>Biek dla sieci Biedronka</p></div>
         <div><span className="ui-label">Timeline</span><p>Q4 2024 – Q3 2025</p></div>
         <div>
           <span className="ui-label">Public release</span>
           <p>
-            <a href="https://lnkd.in/p/dD5QwW4v" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+            <a href="https://lnkd.in/p/dD5QwW4v" target="_blank" rel="noreferrer">
               Announcement on LinkedIn <span className="link-arrow" aria-hidden="true"><ArrowUpRight /></span>
             </a>
           </p>

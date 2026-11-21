@@ -809,7 +809,13 @@ const beyondSkills = [
   },
 ]
 
-const quotes = [
+const quotes: [string, string, string, string?][] = [
+  [
+    `I had the great pleasure of working with Agnieszka on BIEK, an app developed for Biedronka. She is the kind of teammate who immediately elevates the quality of the entire project.\n\nHer exceptional initiative and strong sense of ownership stood out. Agnieszka never waited to be told what to do, she consistently went beyond her immediate responsibilities, proactively spotting opportunities for improvements, initiating meaningful discussions, teaming up to organize necessary workshops and proposing actionable, valuable solutions.\n\nAnother quality I particularly appreciated was her strong cross-disciplinary mindset and ability to connect the dots across Business, Product and Technology. She deeply understands the broader context of product development and consider different users' needs, then translates this into thoughtful, strategically sound and technically feasible design decisions.\n\nAs a technical contributor, I particularly appreciated the quality and thoughtfulness of the Design System Agnieszka co-authored for BIEK. It served as a rock-solid single source of truth, with carefully considered and thoroughly tested edge cases, as well as well-structured design data that made handoff and translation into code remarkably smooth. Her attention to detail and understanding of the mobile-specific guidelines made the collaboration between design and development genuinely effective.\n\nBeyond her craft, Agnieszka brought a benchmark level of professionalism, a collaborative mindset, and a genuine commitment to the quality of our work. I wholeheartedly recommend her to any ambitious team looking not only for a skilled design professional, but for someone who takes real initiative, thinks beyond her own discipline, and actively drives better products forward.`,
+    'Michal Stawarz',
+    'Engineering Manager @ Doktor.se',
+    'https://www.linkedin.com/in/michal-stawarz/',
+  ],
   [
     `Aga, I have truly enjoyed working with you. You were a reliable partner and your professionalism and expertise helped us doing the great projects we did in the last couple of months. I love how you turned our insights into action with a series of very structured workshops. I saw how you iterated on what you have learned through this. You leave behind a very valuable tool and outcome for the teams you've worked with that will have ongoing impact. Your way of working is very transparent and structured. Every team you will work with in the future will highly benefit from it—so had we. It is sad that our collaboration is coming to an end. I am excited to see what you will be up to next.`,
     'Rebecca Beranek',
@@ -941,7 +947,7 @@ function ThemeControl({ value, onChange, gridMode, onToggleGrid }: { value: numb
   )
 }
 
-function ReferenceCard({ quote, name, title }: { quote: string; name: string; title: string }) {
+function ReferenceCard({ quote, name, title, url }: { quote: string; name: string; title: string; url?: string }) {
   const [expanded, setExpanded] = useState(false)
   const [textHeight, setTextHeight] = useState<string>('6.1em')
   const textRef = useRef<HTMLParagraphElement>(null)
@@ -972,7 +978,13 @@ function ReferenceCard({ quote, name, title }: { quote: string; name: string; ti
         {expanded ? 'Show less' : 'Read more'}
       </button>
       <footer>
-        <span className="quote-author">{name}</span>
+        {url ? (
+          <a className="quote-author" href={url} target="_blank" rel="noreferrer">
+            {name}<span className="link-arrow" aria-hidden="true"><ArrowUpRight /></span>
+          </a>
+        ) : (
+          <span className="quote-author">{name}</span>
+        )}
         <span>{title}</span>
       </footer>
     </blockquote>
@@ -1333,7 +1345,7 @@ export default function App() {
         <section id="references" className="reveal">
           <h2 className="section-title">References</h2>
           <div className="quote-grid">
-            {quotes.map(([quote, name, title]) => <ReferenceCard key={name} quote={quote} name={name} title={title} />)}
+            {quotes.map(([quote, name, title, url]) => <ReferenceCard key={name} quote={quote} name={name} title={title} url={url} />)}
           </div>
         </section>
 

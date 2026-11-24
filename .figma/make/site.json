@@ -1,8 +1,8 @@
 {
-  "title": "Aga Malik",
-  "description": "Interactive slider with stepwise sun and moon icons enhances user control and visual feedback, featuring intuitive cursor changes and organized content tabs.",
+  "title": "Aga Malik — Product Designer",
+  "description": "Portfolio of Aga Malik — Senior Product Designer. Product discovery, UX/UI design, mobile apps, and design systems.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,

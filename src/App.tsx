@@ -1153,7 +1153,7 @@ export default function App() {
         <div key={loaderKey} className="page-loader" role="status" aria-label="Loading portfolio" style={{ backgroundColor: palette.bg }} />
       )}
       <header className="mobile-bar">
-        <button className="wordmark" aria-label="Aga Malik — przejdź do początku" onClick={() => goTo('intro')}>
+        <button className="wordmark" aria-label="Agnieszka Malik (Aga Malik) — portfolio" onClick={() => goTo('intro')}>
           <span className="wordmark-mark">A</span>
           <span className="wordmark-dot" aria-hidden="true" />
           <span className="wordmark-full" aria-hidden="true">ga Mal<span className="dotless-i">ı</span>k</span>
@@ -1162,7 +1162,7 @@ export default function App() {
       </header>
 
       <aside className={`sidebar ${menuOpen ? 'open' : ''}`}>
-        <button className="wordmark desktop-wordmark" aria-label="Aga Malik — przejdź do początku" onClick={() => goTo('intro')}>
+        <button className="wordmark desktop-wordmark" aria-label="Agnieszka Malik (Aga Malik) — portfolio" onClick={() => goTo('intro')}>
           <span className="wordmark-mark">A</span>
           <span className="wordmark-dot" aria-hidden="true" />
           <span className="wordmark-full" aria-hidden="true">ga Mal<span className="dotless-i">ı</span>k</span>
@@ -1216,6 +1216,7 @@ export default function App() {
         ) : (
         <>
         <section id="intro" className="intro reveal">
+          <h1 className="sr-only">Agnieszka Malik (Aga Malik) — Senior Product Designer Portfolio</h1>
           <div className="intro-audience" ref={audienceRowRef} role="group" aria-label="Wybierz odbiorcę">
             {audiences.map((item) => (
               <button

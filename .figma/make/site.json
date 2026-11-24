@@ -1,8 +1,11 @@
 {
-  "title": "Aga Malik — Product Designer",
-  "description": "Portfolio of Aga Malik — Senior Product Designer. Product discovery, UX/UI design, mobile apps, and design systems.",
+  "title": "Agnieszka Malik (Aga Malik) — Product Designer",
+  "description": "Portfolio of Agnieszka Malik (Aga Malik) — Senior Product Designer. Product discovery, UX/UI design, mobile apps, and design systems.",
   "robots": {
     "index": true
+  },
+  "customScripts": {
+    "headEnd": "<meta name=\"author\" content=\"Agnieszka Malik (Aga Malik)\">\n<meta name=\"keywords\" content=\"Agnieszka Malik, Aga Malik, Product Designer, UX Designer, UI Designer, Portfolio, Warsaw\">\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"name\": \"Agnieszka Malik\",\n  \"alternateName\": \"Aga Malik\",\n  \"url\": \"https://agamalik.pl\",\n  \"email\": \"agnieszka.w.malik@gmail.com\",\n  \"jobTitle\": \"Senior Product Designer\",\n  \"sameAs\": [\n    \"https://www.linkedin.com/in/agnieszka-malik/\",\n    \"https://github.com/agaebox-afk\"\n  ],\n  \"knowsAbout\": [\"Product Design\", \"UX/UI Design\", \"Design Systems\", \"Mobile Applications\", \"Product Discovery\"]\n}\n</script>"
   },
   "accessibility": {
     "addBypassLinks": false,

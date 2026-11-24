@@ -4,6 +4,9 @@
   "robots": {
     "index": true
   },
+  "analytics": {
+    "googleAnalyticsId": "G-F8YE897839"
+  },
   "customScripts": {
     "headEnd": "<meta name=\"author\" content=\"Agnieszka Malik (Aga Malik)\">\n<meta name=\"keywords\" content=\"Agnieszka Malik, Aga Malik, Product Designer, UX Designer, UI Designer, Portfolio, Warsaw\">\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"name\": \"Agnieszka Malik\",\n  \"alternateName\": \"Aga Malik\",\n  \"url\": \"https://agamalik.pl\",\n  \"email\": \"agnieszka.w.malik@gmail.com\",\n  \"jobTitle\": \"Senior Product Designer\",\n  \"sameAs\": [\n    \"https://www.linkedin.com/in/agnieszka-malik/\",\n    \"https://github.com/agaebox-afk\"\n  ],\n  \"knowsAbout\": [\"Product Design\", \"UX/UI Design\", \"Design Systems\", \"Mobile Applications\", \"Product Discovery\"]\n}\n</script>"
   },

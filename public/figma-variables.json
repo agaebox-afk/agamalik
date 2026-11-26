@@ -1,318 +1,101 @@
 {
-  "$schema": "https://tokens.studio/schemas/token-schema.json",
-  "global": {
-    "radius": {
-      "md": {
-        "$value": 12,
-        "$type": "borderRadius",
-        "$description": "Zaokrąglenie rycin, grafik w case study i diagramów"
-      },
-      "lg": {
-        "$value": 18,
-        "$type": "borderRadius",
-        "$description": "Główne kadry zdjęć (hero visual) oraz kafelki galerii"
-      },
-      "popover": {
-        "$value": 30,
-        "$type": "borderRadius",
-        "$description": "Zaokrąglenie kontenera suwaka motywów"
-      },
-      "pill": {
-        "$value": 999,
-        "$type": "borderRadius",
-        "$description": "Pigułka statusu dostępności do projektów"
-      },
-      "full": {
-        "$value": 9999,
-        "$type": "borderRadius",
-        "$description": "Okrągłe przyciski (trigger motywu, grid trigger, kropki)"
-      }
-    },
-    "space": {
-      "2xs": {
-        "$value": 2,
-        "$type": "spacing",
-        "$description": "Minimalny odstęp ikon w nawigacji"
-      },
-      "xs": {
-        "$value": 4,
-        "$type": "spacing",
-        "$description": "Mikro-odstęp (np. strzałki przy linkach zewnętrznych)"
-      },
-      "sm": {
-        "$value": 8,
-        "$type": "spacing",
-        "$description": "Odstęp między tagami, wskaźnikami i drobnymi labelami"
-      },
-      "md": {
-        "$value": 12,
-        "$type": "spacing",
-        "$description": "Odstęp wewnątrz galerii dwukolumnowej i paska mobilnego"
-      },
-      "base": {
-        "$value": 16,
-        "$type": "spacing",
-        "$description": "Standardowy padding boksów z insightami i metryk"
-      },
-      "lg": {
-        "$value": 24,
-        "$type": "spacing",
-        "$description": "Odstęp między kolumnami faktów w case study"
-      },
-      "xl": {
-        "$value": 32,
-        "$type": "spacing",
-        "$description": "Odstęp w siatkach podsumowań projektów"
-      },
-      "2xl": {
-        "$value": 40,
-        "$type": "spacing",
-        "$description": "Padding boczny lewego paska nawigacji (sidebar)"
-      },
-      "3xl": {
-        "$value": 56,
-        "$type": "spacing",
-        "$description": "Dolny margines wierszy na liście projektów"
-      },
-      "section": {
-        "$value": 92,
-        "$type": "spacing",
-        "$description": "Odstęp pod głównymi tytułami sekcji (section-title)"
-      }
-    }
+  "bg/default": {
+    "Light": "#FFFFFF",
+    "Dark": "#0E0E10"
   },
-  "light": {
-    "color": {
-      "bg": {
-        "default": {
-          "$value": "#FFFFFF",
-          "$type": "color",
-          "$description": "Główne tło strony (canvas) i lewego paska nawigacji"
-        },
-        "surface-subtle": {
-          "$value": "rgba(26, 26, 26, 0.05)",
-          "$type": "color",
-          "$description": "Subtelne tło boksów insightów i kontenerów na ryciny"
-        },
-        "surface-card": {
-          "$value": "rgba(26, 26, 26, 0.07)",
-          "$type": "color",
-          "$description": "Tło okrągłych przycisków kontrolnych (motyw, siatka)"
-        },
-        "surface-media": {
-          "$value": "rgba(26, 26, 26, 0.12)",
-          "$type": "color",
-          "$description": "Tło kontenerów na zdjęcia hero i wideo przed załadowaniem"
-        },
-        "popover": {
-          "$value": "#DEDEDE",
-          "$type": "color",
-          "$description": "Tło wysuwanego dymka kontroli motywów"
-        },
-        "status-subtle": {
-          "$value": "rgba(22, 131, 79, 0.06)",
-          "$type": "color",
-          "$description": "Tło pigułki statusu dostępności do projektów"
-        }
-      },
-      "text": {
-        "primary": {
-          "$value": "#1A1A1A",
-          "$type": "color",
-          "$description": "Główny kolor tekstu, tytuły projektów i nagłówki h1–h3"
-        },
-        "secondary": {
-          "$value": "rgba(26, 26, 26, 0.78)",
-          "$type": "color",
-          "$description": "Treści akapitów, leady w case study i opisy projektów"
-        },
-        "muted": {
-          "$value": "#716D66",
-          "$type": "color",
-          "$description": "Metadane, tagi, daty i małe etykiety sekcji (ui-label)"
-        },
-        "tertiary": {
-          "$value": "rgba(26, 26, 26, 0.55)",
-          "$type": "color",
-          "$description": "Przyciski rozwijania cytatów i przypisy"
-        },
-        "inactive": {
-          "$value": "rgba(26, 26, 26, 0.35)",
-          "$type": "color",
-          "$description": "Nieaktywne pozycje nawigacji i przyciski wyboru odbiorcy"
-        },
-        "popover": {
-          "$value": "#090909",
-          "$type": "color",
-          "$description": "Tekst i etykiety wewnątrz dymka kontroli suwaka"
-        }
-      },
-      "accent": {
-        "default": {
-          "$value": "#E6552F",
-          "$type": "color",
-          "$description": "Główny kolor interaktywny: strzałki linków i hover"
-        },
-        "status-success": {
-          "$value": "#16834F",
-          "$type": "color",
-          "$description": "Pulsująca kropka statusu „Open to new opportunities”"
-        },
-        "slider-track": {
-          "$value": "#AAAAAA",
-          "$type": "color",
-          "$description": "Standardowe punkty skali na suwaku motywu"
-        },
-        "slider-major": {
-          "$value": "#111111",
-          "$type": "color",
-          "$description": "Główne punkty skali motywu (dzień / zmierzch / noc)"
-        }
-      },
-      "border": {
-        "default": {
-          "$value": "rgba(26, 26, 26, 0.22)",
-          "$type": "color",
-          "$description": "Linie akordeonów, sekcji Beyond skills i kamieni milowych"
-        },
-        "subtle": {
-          "$value": "rgba(26, 26, 26, 0.18)",
-          "$type": "color",
-          "$description": "Górna linia oddzielająca wiersze na liście projektów"
-        },
-        "faint": {
-          "$value": "rgba(26, 26, 26, 0.10)",
-          "$type": "color",
-          "$description": "Wewnętrzne linie oddzielające podpunkty na listach"
-        },
-        "status": {
-          "$value": "rgba(22, 131, 79, 0.28)",
-          "$type": "color",
-          "$description": "Ramka pigułki statusu dostępności"
-        },
-        "grid": {
-          "$value": "#1A1A1A",
-          "$type": "color",
-          "$description": "Wyrazista siatka sekcji po włączeniu trybu Grid Mode"
-        }
-      }
-    }
+  "bg/surface-subtle": {
+    "Light": "#1A1A1A0D",
+    "Dark": "#F4EFE60D"
   },
-  "dark": {
-    "color": {
-      "bg": {
-        "default": {
-          "$value": "#0E0E10",
-          "$type": "color",
-          "$description": "Główne tło strony (canvas) i lewego paska nawigacji"
-        },
-        "surface-subtle": {
-          "$value": "rgba(244, 239, 230, 0.05)",
-          "$type": "color",
-          "$description": "Subtelne tło boksów insightów i kontenerów na ryciny"
-        },
-        "surface-card": {
-          "$value": "rgba(244, 239, 230, 0.07)",
-          "$type": "color",
-          "$description": "Tło okrągłych przycisków kontrolnych (motyw, siatka)"
-        },
-        "surface-media": {
-          "$value": "rgba(244, 239, 230, 0.12)",
-          "$type": "color",
-          "$description": "Tło kontenerów na zdjęcia hero i wideo przed załadowaniem"
-        },
-        "popover": {
-          "$value": "#DEDEDE",
-          "$type": "color",
-          "$description": "Tło wysuwanego dymka kontroli motywów"
-        },
-        "status-subtle": {
-          "$value": "rgba(22, 131, 79, 0.06)",
-          "$type": "color",
-          "$description": "Tło pigułki statusu dostępności do projektów"
-        }
-      },
-      "text": {
-        "primary": {
-          "$value": "#F4EFE6",
-          "$type": "color",
-          "$description": "Główny kolor tekstu, tytuły projektów i nagłówki h1–h3"
-        },
-        "secondary": {
-          "$value": "rgba(244, 239, 230, 0.78)",
-          "$type": "color",
-          "$description": "Treści akapitów, leady w case study i opisy projektów"
-        },
-        "muted": {
-          "$value": "#95928C",
-          "$type": "color",
-          "$description": "Metadane, tagi, daty i małe etykiety sekcji (ui-label)"
-        },
-        "tertiary": {
-          "$value": "rgba(244, 239, 230, 0.55)",
-          "$type": "color",
-          "$description": "Przyciski rozwijania cytatów i przypisy"
-        },
-        "inactive": {
-          "$value": "rgba(244, 239, 230, 0.35)",
-          "$type": "color",
-          "$description": "Nieaktywne pozycje nawigacji i przyciski wyboru odbiorcy"
-        },
-        "popover": {
-          "$value": "#090909",
-          "$type": "color",
-          "$description": "Tekst i etykiety wewnątrz dymka kontroli suwaka"
-        }
-      },
-      "accent": {
-        "default": {
-          "$value": "#C9B8F0",
-          "$type": "color",
-          "$description": "Główny kolor interaktywny: strzałki linków i hover"
-        },
-        "status-success": {
-          "$value": "#16834F",
-          "$type": "color",
-          "$description": "Pulsująca kropka statusu „Open to new opportunities”"
-        },
-        "slider-track": {
-          "$value": "#AAAAAA",
-          "$type": "color",
-          "$description": "Standardowe punkty skali na suwaku motywu"
-        },
-        "slider-major": {
-          "$value": "#111111",
-          "$type": "color",
-          "$description": "Główne punkty skali motywu (dzień / zmierzch / noc)"
-        }
-      },
-      "border": {
-        "default": {
-          "$value": "rgba(244, 239, 230, 0.22)",
-          "$type": "color",
-          "$description": "Linie akordeonów, sekcji Beyond skills i kamieni milowych"
-        },
-        "subtle": {
-          "$value": "rgba(244, 239, 230, 0.18)",
-          "$type": "color",
-          "$description": "Górna linia oddzielająca wiersze na liście projektów"
-        },
-        "faint": {
-          "$value": "rgba(244, 239, 230, 0.10)",
-          "$type": "color",
-          "$description": "Wewnętrzne linie oddzielające podpunkty na listach"
-        },
-        "status": {
-          "$value": "rgba(22, 131, 79, 0.28)",
-          "$type": "color",
-          "$description": "Ramka pigułki statusu dostępności"
-        },
-        "grid": {
-          "$value": "#F4EFE6",
-          "$type": "color",
-          "$description": "Wyrazista siatka sekcji po włączeniu trybu Grid Mode"
-        }
-      }
-    }
-  }
+  "bg/surface-card": {
+    "Light": "#1A1A1A12",
+    "Dark": "#F4EFE612"
+  },
+  "bg/surface-media": {
+    "Light": "#1A1A1A1F",
+    "Dark": "#F4EFE61F"
+  },
+  "bg/popover": {
+    "Light": "#DEDEDE",
+    "Dark": "#DEDEDE"
+  },
+  "bg/status-subtle": {
+    "Light": "#16834F0F",
+    "Dark": "#16834F0F"
+  },
+  "text/primary": {
+    "Light": "#1A1A1A",
+    "Dark": "#F4EFE6"
+  },
+  "text/secondary": {
+    "Light": "#1A1A1AC7",
+    "Dark": "#F4EFE6C7"
+  },
+  "text/muted": {
+    "Light": "#716D66",
+    "Dark": "#95928C"
+  },
+  "text/tertiary": {
+    "Light": "#1A1A1A8C",
+    "Dark": "#F4EFE68C"
+  },
+  "text/inactive": {
+    "Light": "#1A1A1A59",
+    "Dark": "#F4EFE659"
+  },
+  "text/popover": {
+    "Light": "#090909",
+    "Dark": "#090909"
+  },
+  "accent/default": {
+    "Light": "#E6552F",
+    "Dark": "#C9B8F0"
+  },
+  "accent/status-success": {
+    "Light": "#16834F",
+    "Dark": "#16834F"
+  },
+  "accent/slider-track": {
+    "Light": "#AAAAAA",
+    "Dark": "#AAAAAA"
+  },
+  "accent/slider-major": {
+    "Light": "#111111",
+    "Dark": "#111111"
+  },
+  "border/default": {
+    "Light": "#1A1A1A38",
+    "Dark": "#F4EFE638"
+  },
+  "border/subtle": {
+    "Light": "#1A1A1A2E",
+    "Dark": "#F4EFE62E"
+  },
+  "border/faint": {
+    "Light": "#1A1A1A1A",
+    "Dark": "#F4EFE61A"
+  },
+  "border/status": {
+    "Light": "#16834F47",
+    "Dark": "#16834F47"
+  },
+  "border/grid": {
+    "Light": "#1A1A1A",
+    "Dark": "#F4EFE6"
+  },
+  "radius/md": 12,
+  "radius/lg": 18,
+  "radius/popover": 30,
+  "radius/pill": 999,
+  "radius/full": 9999,
+  "space/2xs": 2,
+  "space/xs": 4,
+  "space/sm": 8,
+  "space/md": 12,
+  "space/base": 16,
+  "space/lg": 24,
+  "space/xl": 32,
+  "space/2xl": 40,
+  "space/3xl": 56,
+  "space/section": 92
 }

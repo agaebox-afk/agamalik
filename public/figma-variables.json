@@ -1,101 +1,277 @@
 {
-  "bg/default": {
-    "Light": "#FFFFFF",
-    "Dark": "#0E0E10"
+  "meta": {
+    "version": "1.0.0",
+    "name": "Aga Malik Portfolio Design Tokens"
   },
-  "bg/surface-subtle": {
-    "Light": "#1A1A1A0D",
-    "Dark": "#F4EFE60D"
-  },
-  "bg/surface-card": {
-    "Light": "#1A1A1A12",
-    "Dark": "#F4EFE612"
-  },
-  "bg/surface-media": {
-    "Light": "#1A1A1A1F",
-    "Dark": "#F4EFE61F"
-  },
-  "bg/popover": {
-    "Light": "#DEDEDE",
-    "Dark": "#DEDEDE"
-  },
-  "bg/status-subtle": {
-    "Light": "#16834F0F",
-    "Dark": "#16834F0F"
-  },
-  "text/primary": {
-    "Light": "#1A1A1A",
-    "Dark": "#F4EFE6"
-  },
-  "text/secondary": {
-    "Light": "#1A1A1AC7",
-    "Dark": "#F4EFE6C7"
-  },
-  "text/muted": {
-    "Light": "#716D66",
-    "Dark": "#95928C"
-  },
-  "text/tertiary": {
-    "Light": "#1A1A1A8C",
-    "Dark": "#F4EFE68C"
-  },
-  "text/inactive": {
-    "Light": "#1A1A1A59",
-    "Dark": "#F4EFE659"
-  },
-  "text/popover": {
-    "Light": "#090909",
-    "Dark": "#090909"
-  },
-  "accent/default": {
-    "Light": "#E6552F",
-    "Dark": "#C9B8F0"
-  },
-  "accent/status-success": {
-    "Light": "#16834F",
-    "Dark": "#16834F"
-  },
-  "accent/slider-track": {
-    "Light": "#AAAAAA",
-    "Dark": "#AAAAAA"
-  },
-  "accent/slider-major": {
-    "Light": "#111111",
-    "Dark": "#111111"
-  },
-  "border/default": {
-    "Light": "#1A1A1A38",
-    "Dark": "#F4EFE638"
-  },
-  "border/subtle": {
-    "Light": "#1A1A1A2E",
-    "Dark": "#F4EFE62E"
-  },
-  "border/faint": {
-    "Light": "#1A1A1A1A",
-    "Dark": "#F4EFE61A"
-  },
-  "border/status": {
-    "Light": "#16834F47",
-    "Dark": "#16834F47"
-  },
-  "border/grid": {
-    "Light": "#1A1A1A",
-    "Dark": "#F4EFE6"
-  },
-  "radius/md": 12,
-  "radius/lg": 18,
-  "radius/popover": 30,
-  "radius/pill": 999,
-  "radius/full": 9999,
-  "space/2xs": 2,
-  "space/xs": 4,
-  "space/sm": 8,
-  "space/md": 12,
-  "space/base": 16,
-  "space/lg": 24,
-  "space/xl": 32,
-  "space/2xl": 40,
-  "space/3xl": 56,
-  "space/section": 92
+  "collections": [
+    {
+      "name": "Color Tokens",
+      "modes": [
+        { "name": "Light" },
+        { "name": "Dark" }
+      ],
+      "variables": [
+        {
+          "name": "bg/default",
+          "type": "COLOR",
+          "description": "Główne tło strony (canvas) i lewego paska nawigacji",
+          "values": { "Light": "#FFFFFF", "Dark": "#0E0E10" },
+          "valuesByMode": { "Light": "#FFFFFF", "Dark": "#0E0E10" }
+        },
+        {
+          "name": "bg/surface-subtle",
+          "type": "COLOR",
+          "description": "Subtelne tło boksów insightów i kontenerów na ryciny",
+          "values": { "Light": "#1A1A1A0D", "Dark": "#F4EFE60D" },
+          "valuesByMode": { "Light": "#1A1A1A0D", "Dark": "#F4EFE60D" }
+        },
+        {
+          "name": "bg/surface-card",
+          "type": "COLOR",
+          "description": "Tło okrągłych przycisków kontrolnych (motyw, siatka)",
+          "values": { "Light": "#1A1A1A12", "Dark": "#F4EFE612" },
+          "valuesByMode": { "Light": "#1A1A1A12", "Dark": "#F4EFE612" }
+        },
+        {
+          "name": "bg/surface-media",
+          "type": "COLOR",
+          "description": "Tło kontenerów na zdjęcia hero i wideo przed załadowaniem",
+          "values": { "Light": "#1A1A1A1F", "Dark": "#F4EFE61F" },
+          "valuesByMode": { "Light": "#1A1A1A1F", "Dark": "#F4EFE61F" }
+        },
+        {
+          "name": "bg/popover",
+          "type": "COLOR",
+          "description": "Tło wysuwanego dymka kontroli motywów",
+          "values": { "Light": "#DEDEDE", "Dark": "#DEDEDE" },
+          "valuesByMode": { "Light": "#DEDEDE", "Dark": "#DEDEDE" }
+        },
+        {
+          "name": "bg/status-subtle",
+          "type": "COLOR",
+          "description": "Tło pigułki statusu dostępności do projektów",
+          "values": { "Light": "#16834F0F", "Dark": "#16834F0F" },
+          "valuesByMode": { "Light": "#16834F0F", "Dark": "#16834F0F" }
+        },
+        {
+          "name": "text/primary",
+          "type": "COLOR",
+          "description": "Główny kolor tekstu, tytuły projektów i nagłówki h1–h3",
+          "values": { "Light": "#1A1A1A", "Dark": "#F4EFE6" },
+          "valuesByMode": { "Light": "#1A1A1A", "Dark": "#F4EFE6" }
+        },
+        {
+          "name": "text/secondary",
+          "type": "COLOR",
+          "description": "Treści akapitów, leady w case study i opisy projektów",
+          "values": { "Light": "#1A1A1AC7", "Dark": "#F4EFE6C7" },
+          "valuesByMode": { "Light": "#1A1A1AC7", "Dark": "#F4EFE6C7" }
+        },
+        {
+          "name": "text/muted",
+          "type": "COLOR",
+          "description": "Metadane, tagi, daty i małe etykiety sekcji (ui-label)",
+          "values": { "Light": "#716D66", "Dark": "#95928C" },
+          "valuesByMode": { "Light": "#716D66", "Dark": "#95928C" }
+        },
+        {
+          "name": "text/tertiary",
+          "type": "COLOR",
+          "description": "Przyciski rozwijania cytatów i przypisy",
+          "values": { "Light": "#1A1A1A8C", "Dark": "#F4EFE68C" },
+          "valuesByMode": { "Light": "#1A1A1A8C", "Dark": "#F4EFE68C" }
+        },
+        {
+          "name": "text/inactive",
+          "type": "COLOR",
+          "description": "Nieaktywne pozycje nawigacji i przyciski wyboru odbiorcy",
+          "values": { "Light": "#1A1A1A59", "Dark": "#F4EFE659" },
+          "valuesByMode": { "Light": "#1A1A1A59", "Dark": "#F4EFE659" }
+        },
+        {
+          "name": "text/popover",
+          "type": "COLOR",
+          "description": "Tekst i etykiety wewnątrz dymka kontroli suwaka",
+          "values": { "Light": "#090909", "Dark": "#090909" },
+          "valuesByMode": { "Light": "#090909", "Dark": "#090909" }
+        },
+        {
+          "name": "accent/default",
+          "type": "COLOR",
+          "description": "Główny kolor interaktywny: strzałki linków i hover",
+          "values": { "Light": "#E6552F", "Dark": "#C9B8F0" },
+          "valuesByMode": { "Light": "#E6552F", "Dark": "#C9B8F0" }
+        },
+        {
+          "name": "accent/status-success",
+          "type": "COLOR",
+          "description": "Pulsująca kropka statusu „Open to new opportunities”",
+          "values": { "Light": "#16834F", "Dark": "#16834F" },
+          "valuesByMode": { "Light": "#16834F", "Dark": "#16834F" }
+        },
+        {
+          "name": "accent/slider-track",
+          "type": "COLOR",
+          "description": "Standardowe punkty skali na suwaku motywu",
+          "values": { "Light": "#AAAAAA", "Dark": "#AAAAAA" },
+          "valuesByMode": { "Light": "#AAAAAA", "Dark": "#AAAAAA" }
+        },
+        {
+          "name": "accent/slider-major",
+          "type": "COLOR",
+          "description": "Główne punkty skali motywu (dzień / zmierzch / noc)",
+          "values": { "Light": "#111111", "Dark": "#111111" },
+          "valuesByMode": { "Light": "#111111", "Dark": "#111111" }
+        },
+        {
+          "name": "border/default",
+          "type": "COLOR",
+          "description": "Linie akordeonów, sekcji Beyond skills i kamieni milowych",
+          "values": { "Light": "#1A1A1A38", "Dark": "#F4EFE638" },
+          "valuesByMode": { "Light": "#1A1A1A38", "Dark": "#F4EFE638" }
+        },
+        {
+          "name": "border/subtle",
+          "type": "COLOR",
+          "description": "Górna linia oddzielająca wiersze na liście projektów",
+          "values": { "Light": "#1A1A1A2E", "Dark": "#F4EFE62E" },
+          "valuesByMode": { "Light": "#1A1A1A2E", "Dark": "#F4EFE62E" }
+        },
+        {
+          "name": "border/faint",
+          "type": "COLOR",
+          "description": "Wewnętrzne linie oddzielające podpunkty na listach",
+          "values": { "Light": "#1A1A1A1A", "Dark": "#F4EFE61A" },
+          "valuesByMode": { "Light": "#1A1A1A1A", "Dark": "#F4EFE61A" }
+        },
+        {
+          "name": "border/status",
+          "type": "COLOR",
+          "description": "Ramka pigułki statusu dostępności",
+          "values": { "Light": "#16834F47", "Dark": "#16834F47" },
+          "valuesByMode": { "Light": "#16834F47", "Dark": "#16834F47" }
+        },
+        {
+          "name": "border/grid",
+          "type": "COLOR",
+          "description": "Wyrazista siatka sekcji po włączeniu trybu Grid Mode",
+          "values": { "Light": "#1A1A1A", "Dark": "#F4EFE6" },
+          "valuesByMode": { "Light": "#1A1A1A", "Dark": "#F4EFE6" }
+        }
+      ]
+    },
+    {
+      "name": "Dimension Tokens",
+      "modes": [
+        { "name": "Value" }
+      ],
+      "variables": [
+        {
+          "name": "radius/md",
+          "type": "FLOAT",
+          "description": "Zaokrąglenie rycin, grafik w case study i diagramów",
+          "values": { "Value": 12 },
+          "valuesByMode": { "Value": 12 }
+        },
+        {
+          "name": "radius/lg",
+          "type": "FLOAT",
+          "description": "Główne kadry zdjęć (hero visual) oraz kafelki galerii",
+          "values": { "Value": 18 },
+          "valuesByMode": { "Value": 18 }
+        },
+        {
+          "name": "radius/popover",
+          "type": "FLOAT",
+          "description": "Zaokrąglenie kontenera suwaka motywów",
+          "values": { "Value": 30 },
+          "valuesByMode": { "Value": 30 }
+        },
+        {
+          "name": "radius/pill",
+          "type": "FLOAT",
+          "description": "Pigułka statusu dostępności do projektów",
+          "values": { "Value": 999 },
+          "valuesByMode": { "Value": 999 }
+        },
+        {
+          "name": "radius/full",
+          "type": "FLOAT",
+          "description": "Okrągłe przyciski (trigger motywu, grid trigger, kropki)",
+          "values": { "Value": 9999 },
+          "valuesByMode": { "Value": 9999 }
+        },
+        {
+          "name": "space/2xs",
+          "type": "FLOAT",
+          "description": "Minimalny odstęp ikon w nawigacji",
+          "values": { "Value": 2 },
+          "valuesByMode": { "Value": 2 }
+        },
+        {
+          "name": "space/xs",
+          "type": "FLOAT",
+          "description": "Mikro-odstęp (np. strzałki przy linkach zewnętrznych)",
+          "values": { "Value": 4 },
+          "valuesByMode": { "Value": 4 }
+        },
+        {
+          "name": "space/sm",
+          "type": "FLOAT",
+          "description": "Odstęp między tagami, wskaźnikami i drobnymi labelami",
+          "values": { "Value": 8 },
+          "valuesByMode": { "Value": 8 }
+        },
+        {
+          "name": "space/md",
+          "type": "FLOAT",
+          "description": "Odstęp wewnątrz galerii dwukolumnowej i paska mobilnego",
+          "values": { "Value": 12 },
+          "valuesByMode": { "Value": 12 }
+        },
+        {
+          "name": "space/base",
+          "type": "FLOAT",
+          "description": "Standardowy padding boksów z insightami i metryk",
+          "values": { "Value": 16 },
+          "valuesByMode": { "Value": 16 }
+        },
+        {
+          "name": "space/lg",
+          "type": "FLOAT",
+          "description": "Odstęp między kolumnami faktów w case study",
+          "values": { "Value": 24 },
+          "valuesByMode": { "Value": 24 }
+        },
+        {
+          "name": "space/xl",
+          "type": "FLOAT",
+          "description": "Odstęp w siatkach podsumowań projektów",
+          "values": { "Value": 32 },
+          "valuesByMode": { "Value": 32 }
+        },
+        {
+          "name": "space/2xl",
+          "type": "FLOAT",
+          "description": "Padding boczny lewego paska nawigacji (sidebar)",
+          "values": { "Value": 40 },
+          "valuesByMode": { "Value": 40 }
+        },
+        {
+          "name": "space/3xl",
+          "type": "FLOAT",
+          "description": "Dolny margines wierszy na liście projektów",
+          "values": { "Value": 56 },
+          "valuesByMode": { "Value": 56 }
+        },
+        {
+          "name": "space/section",
+          "type": "FLOAT",
+          "description": "Odstęp pod głównymi tytułami sekcji (section-title)",
+          "values": { "Value": 92 },
+          "valuesByMode": { "Value": 92 }
+        }
+      ]
+    }
+  ]
 }
